@@ -53,3 +53,14 @@ def Moda(caracteristicas):
 
 def Rango(caracteristicas):
   print("El rango de las notas de matemáticas, escritura y lectura es:{}".format(valor_maximo - valor_minimo))
+
+# Creación deñ dataset con números aleatorios
+
+from random import*
+file = open("datospeso.csv", "w")
+file.write("peso")
+
+for i in range(100):
+  num = randint(100,200)
+  file.write("\n{}".format(num))
+# En la línea 60 ponemos "datospeso.csv" porque el dataset se llama así
