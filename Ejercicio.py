@@ -46,3 +46,10 @@ def Mediana(caracteristica):
   mediana = int(1/2)
   mediana_mates = (notas_mates[mediana] + notas_mates[mediana + 1])/2
   print("La mediana de todas las notas de matemáticas es:{}".format(mediana_mates))
+
+def Moda(caracteristicas):
+  moda_mates = count.(notas_mates)
+  print("La moda de todas las notas de matemáticas es:{}".format(moda_mates))
+
+def Rango(caracteristicas):
+  print("El rango de las notas de matemáticas, escritura y lectura es:{}".format(valor_maximo - valor_minimo))
