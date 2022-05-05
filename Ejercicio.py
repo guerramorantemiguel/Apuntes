@@ -83,3 +83,18 @@ class varianza:
     var = self.csv[self.columna].var()
     print("La varianza es :")
     print(var)
+
+# Para hacer gráfico
+import matplotlib.pyplot as plt
+class Grafico():
+  def __init__(self, lista, media, mediana):
+    self.lista = lista
+    self.media = media
+    self.mediana = mediana
+  def visualizacion(self):
+    plt.subplot(2, 2, 1)
+    plt.hist(self.lista)
+    plt.title("Nombre")
+    plt.axvline(self.media, color = 'color', linestyle = 'dashed')
+    linewidth = 1, label = str(self.mediana)
+    plt.legend(loc='upper right')
