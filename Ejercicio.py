@@ -64,3 +64,22 @@ for i in range(100):
   num = randint(100,200)
   file.write("\n{}".format(num))
 # En la línea 60 ponemos "datospeso.csv" porque el dataset se llama así
+
+
+# desviacion tipica y varianza 
+class Desviacion_tipica:
+  def __init__(self, csv, columna):
+    self.csv = csv
+    self.columna = columna
+  def calculo(self):
+    desv = self.csv[self.columna].mad()
+    print("La desviacion tipica es: ")
+    print(desv)
+class varianza:
+  def __init__(self, csv, columna):
+    self.csv = csv
+    self.columna = columna
+  def calculo(self):
+    var = self.csv[self.columna].var()
+    print("La varianza es :")
+    print(var)
