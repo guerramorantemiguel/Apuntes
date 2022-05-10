@@ -98,3 +98,4 @@ class Grafico():
     plt.axvline(self.media, color = 'color', linestyle = 'dashed')
     linewidth = 1, label = str(self.mediana)
     plt.legend(loc='upper right')
+
