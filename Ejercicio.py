@@ -94,8 +94,56 @@ class Grafico():
   def visualizacion(self):
     plt.subplot(2, 2, 1)
     plt.hist(self.lista)
-    plt.title("Nombre")
-    plt.axvline(self.media, color = 'color', linestyle = 'dashed')
-    linewidth = 1, label = str(self.mediana)
+    plt.title("Histograma y media")
+    plt.axvline(self.media, color = 'color', linestyle = 'dashed', linewidth = 1, label = str(self.mediana))
     plt.legend(loc='upper right')
+
+    plt.subplot(2, 2, 2)
+    plt.hist(self.lista)
+    plt.title("Histograma y media")
+    plt.axvline(self.media, color = 'green', linestyle = 'dashed', linewidth = 1, label = str(self.media))
+    plt.legend(loc = 'upper right')
+
+    plt.subplot(2, 2, 4)
+    plt.hist(self.lista)
+    plt.title("Diagrama de caja y bigotes")
+    plt.show()
+fig, ax = plt.subplots()
+
+class Grafico_barras:
+  def __init__(self, csv, columna):
+    self.csv = csv
+    self.columna = columna
+
+  def crear_grafico(self):
+    fig, ax = plt.subplots()
+    self.csv[self.columna].plot(kind="hist", ax = ax)
+    ax.set_title("histograma", loc = "center", fontdict = {'fontsize': 14, 'fontweight' : 'bold', 'color': 'tab:blue'})
+    ax.set_ylabel('')
+    plt.savefig('img/histograma-' + '-'.join(self.columna) + '.png', bbox_inches = 'tight')
+    return
+class Grafico_sectores:
+  def __init__(self, csv, columna):
+    self.csv = csv
+    self.columna = columna
+  def crear_grafico(self):
+    fig, ax = plt.subplots()
+    self.csv[self.columna].plot(kind="hist", ax = ax)
+    ax.set_title("histograma", loc = "center", fontdict = {'fontsize': 14, 'fontweight' : 'bold', 'color': 'tab:blue'})
+    ax.set_ylabel('')
+    plt.savefig('img/histograma-' + '-'.join(self.columna) + '.png', bbox_inches = 'tight')
+    return
+
+class Grafico_histograma:
+  def __init__(self, csv, columna):
+    self.csv = csv
+    self.columna = columna
+  def crear_grafico(self):
+    fig, ax = plt.subplots()
+    self.csv[self.columna].plot(kind="hist", ax = ax)
+    ax.set_title("histograma", loc = "center", fontdict = {'fontsize': 14, 'fontweight' : 'bold', 'color': 'tab:blue'})
+    ax.set_ylabel('')
+    plt.savefig('img/histograma-' + '-'.join(self.columna) + '.png', bbox_inches = 'tight')
+    return
+    
 
